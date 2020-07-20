@@ -54,6 +54,9 @@
 import { ref, reactive, toRefs, computed } from "vue";
 import useScroll from "./../utils/scroll";
 import useMouse from "./../utils/mouse";
+
+import useStorage from "./../utils/local";
+
 export default {
   setup() {
     const state = reactive({
@@ -69,6 +72,21 @@ export default {
         { id: "8", title: "摸鱼", completed: true },
       ],
     });
+
+    // const stateStorage = useStorage("todo-vue-3", {
+    //   newTodo: "",
+    //   todos: [
+    //     { id: "1", title: "吃饭", completed: false },
+    //     { id: "2", title: "睡觉", completed: false },
+    //     { id: "3", title: "学习vue3", completed: false },
+    //     { id: "4", title: "写文章", completed: false },
+    //     { id: "5", title: "看动画", completed: false },
+    //     { id: "6", title: "逛知乎", completed: false },
+    //     { id: "7", title: "撸狗", completed: false },
+    //     { id: "8", title: "摸鱼", completed: true },
+    //   ],
+    // });
+
     function addTodo() {
       var value = state.newTodo && state.newTodo.trim();
       if (!value) {
