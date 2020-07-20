@@ -6,10 +6,11 @@
     "build": "vite build"
   },
   "dependencies": {
-    "vue": "^3.0.0-rc.1"
+    "todomvc-app-css": "^2.3.0",
+    "vue": "^3.0.0-rc.2"
   },
   "devDependencies": {
     "vite": "1.0.0-rc.1",
-    "@vue/compiler-sfc": "3.0.0-rc.1"
+    "@vue/compiler-sfc": "3.0.0-rc.2"
   }
 }
